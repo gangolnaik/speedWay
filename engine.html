@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Babylon Speedway</title>
+    <!-- Policy -->
+    <meta http-equiv="X-Content-Security-Policy" content="default-src * ws: wss: gap: data: file: http: https: blob:; worker-src * ws: wss: gap: data: file: http: https: blob:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *" />
+    <!-- Caches -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="html" charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Default -->
+    <meta name="edge" content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+    <meta name="browsermode" content="application">
+    <meta name="description" content="Babylon Speedway">
+    <meta name="theme-color" content="#2A2342">
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="Babylon Spee">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Android  -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Windows  -->
+    <meta name="application-name" content="Babylon Speedway">
+    <meta name="msapplication-navbutton-color" content="#2A2342">
+    <meta name="msapplication-tooltip" content="Babylon Speedway">
+    <meta name="msapplication-starturl" content=".">
+    <meta name="msapplication-TileColor" content="#2A2342">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Favorite -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Toaster - https://github.com/dolce/iziToast -->
+    <link href="toaster.css" rel="stylesheet" type="css">
+    <!-- Apple Touch -->
+	<link rel="apple-touch-icon-precomposed" href="icons/touch-57x57.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/touch-72x72.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="icons/touch-76x76.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/touch-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="icons/touch-120x120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/touch-144x144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="icons/touch-152x152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="167x167" href="icons/touch-167x167.png">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="icons/touch-180x180.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="icons/splash-1125x2436.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="icons/splash-750x1334.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="icons/splash-1242x2208.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="icons/splash-640x1136.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="icons/splash-1536x2048.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="icons/splash-1668x2224.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="icons/splash-2048x2732.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="icons/splash-2436x1125.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="icons/splash-1334x750.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="icons/splash-2208x1242.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="icons/splash-1136x640.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="icons/splash-2048x1536.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="icons/splash-2224x1668.png">
+	<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="icons/splash-2732x2048.png">
+	<!-- Web Application -->
+	<link rel="manifest" href="manifest.json" />
+
+    <style>
+        html, body {
+            position: absolute;
+            min-height: 100%;
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+            touch-action: none;
+            font-family: "Segoe UI", "Segoe WP", "Verdana", "Arial";
+            background-color: #2A2342;
+        }
+        #panel {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 100px;
+            min-width: 400px;
+            min-height: 100px;
+            margin-top: -50px;
+            margin-left: -200px;
+            z-index: 1000;
+        }
+        #load {
+            border: 4px solid #F3F3F3;
+            border-top: 4px solid #E0684B;
+            border-radius: 50%;
+            width: 72px;
+            height: 72px;
+            z-index: 1001;
+            animation: spin 2s linear infinite;
+        }
+        #sts {
+            position: absolute;
+            top: 50%;
+            left:50%;
+            padding: 0px;
+            margin: 0px;
+            z-index: 1001;
+            width: 100px;
+            min-width: 100px;
+            margin-top: -14px;
+            margin-left: -50px;
+            font-size: 10px;
+            text-align: center;
+            color: #F3F3F3;
+            outline: none;
+            overflow: hidden;
+        }
+        #proj {
+            margin: 0px;
+            padding: 0px;
+            padding-top: 16px;
+            z-index: 1001;
+            width: 400px;
+            font-size: 14px;
+            text-align: center;
+            color: #F3F3F3;
+            outline: none;
+            overflow: hidden;
+        }
+        #cvs {
+            position: absolute;
+            min-height: 100%;
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            z-index: 0;
+            opacity: 0;
+            outline: none;
+            overflow: hidden;
+        }
+        .hidden { display: none; }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script type="javascript">
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(window.location.search);
+            return (results !== null) ? decodeURIComponent(results[1].replace(/\+/g, ' ')) : null;
+        };    
+    </script>
+</head>
+<body touch-action="none">
+    <div id="panel">
+        <center>
+            <div id="load"></div>
+            <div id="sts"></div>
+            <div id="proj">Babylon Speedway</div>
+        </center>
+    </div>
+    <canvas id="cvs"></canvas>
+
+    <!-- Tool Libraries -->
+    <script type="javascript" src="fastclick.js"></script>
+    <script type="javascript" src="toaster.js"></script>
+    <script type="javascript" src="meter.js"></script>
+    <script type="javascript" src="pep.js"></script>
+
+    <!-- Engine Libraries -->
+    <script type="javascript" src="babylon.max.js"></script>
+    <script type="javascript" src="babylon.gui.js"></script>
+    <script type="javascript" src="babylon.gltf.js"></script>
+
+    <!-- Support Libraries -->
+	<script type="javascript" src="ammo.wasm.js"></script>
+	<script type="javascript" src="babylon.navmesh.js"></script>
+	<script type="javascript" src="babylon.inspector.js"></script>
+
+    <!-- Manager Libraries -->
+    <script type="javascript" src="babylon.earcut.js"></script>
+    <script type="javascript" src="babylon.manager.js"></script>
+    <script type="javascript" src="babylon.materials.js"></script>
+    <script type="javascript" src="babylon.meshwriter.js"></script>
+
+    <!-- Project Script Bundle -->
+    <script type="javascript" src="BabylonSpeedway.js"></script>
+
+    <!-- Default Scene Loader -->
+    <script type="javascript">
+    (async function() {
+        window.scene = null;
+        var versionStamp = '0ab632b0-dcfb-4689-a871-fe747fa7f5a0';
+        var pagetype = "project", defaultscene= "AutoGarage.gltf", renderengine = 0, animstartup= 0, enablephysics = true, antialias = true, adaptive = true, timeout = 1, autoclose=true, datax = "#E0684B", folder = "scenes/", title = "Babylon Speedway";
+        var loaded = false, downloaded = 0;
+        var panel = document.getElementById("panel");
+        var loader = document.getElementById("load");
+        var label = document.getElementById("sts");
+        var proj = document.getElementById("proj");
+        var divcvs = document.getElementById("cvs");
+        // ************************************************************************ //
+        // QUERY STRING - Parse Root Urls And Scene Name Parameters                 //
+        // ************************************************************************ //
+        var rooturl = "" + (getUrlParameter("root") || "");
+        if (rooturl != null && rooturl !== "" && !rooturl.endsWith("/")) rooturl += "/";
+        var sceneurl = "" + (getUrlParameter("path") || folder);
+        if (sceneurl != null && sceneurl !== "" && !sceneurl.endsWith("/")) sceneurl += "/";
+        var scenename = "" + (getUrlParameter("scene") || defaultscene);
+        var scenepath = "" + (rooturl + sceneurl);
+        // ************************************************************************ //
+        // STATS PANEL - Setup Performance Stats Information Panel                  //
+        // ************************************************************************ //
+        var showStatsPanel = true;
+        if (showStatsPanel === true && typeof FPSMeter !== "undefined") {
+            var stats = 'fps';
+            var look = 'colorful';
+            window.METER = new FPSMeter({
+                interval:  100,         // Update interval in milliseconds.
+                smoothing: 10,          // Spike smoothing strength. 1 means no smoothing.
+                show:      stats,       // Whether to show 'fps', or 'ms' = frame duration in milliseconds.
+                toggleOn:  'click',     // Toggle between show 'fps' and 'ms' on this event.
+                decimals:  0,           // Number of decimals in FPS number. 1 = 59.9, 2 = 59.94, ...
+                maxFps:    60,          // Max expected FPS value.
+                threshold: 100,         // Minimal tick reporting interval in milliseconds.
+                // ..
+                // Position Options
+                // ..
+                position: 'absolute',   // Meter position.
+                zIndex:   10,           // Meter Z index.
+                right:    '5px',        // Meter right offset.
+                top:      '5px',        // Meter top offset.
+                left:     'auto',       // Meter left offset.
+                bottom:   'auto',       // Meter bottom offset.
+                margin:   '0 0 0 0',    // Meter margin. Helps with centering the counter when left: 50%;
+                // ..
+                // Theme Options
+                // ..
+                theme: look,            // Meter theme. Build in: 'dark', 'light', 'transparent', 'colorful'.
+                heat:  1,               // Allow themes to use coloring by FPS heat. 0 FPS = red, maxFps = green.
+                // ..
+                // Graph Options
+                // ..
+                graph:   1,             // Whether to show history graph.
+                history: 20             // How many history states to show in a graph.
+            });
+        }
+        // ************************************************************************ //
+        // SCENE MANAGER - Attach Project Loadeing Screen Event Handler             //
+        // ************************************************************************ //
+        BABYLON.SceneLoader.CleanBoneMatrixWeights = true;
+        if (BABYLON.SceneManager != null) BABYLON.SceneManager.AnimationStartMode = animstartup;
+        // ************************************************************************ //
+        // LOADING SCREEN - Attach Project Loadeing Screen Event Handler            //
+        // ************************************************************************ //
+        function LoadingScreen() {};
+        LoadingScreen.prototype.displayLoadingUI = function() {};
+        LoadingScreen.prototype.hideLoadingUI = function() {};
+        // ************************************************************************ //
+        // ERROR MESSAGE - Display Toaster Error Message Information                //
+        // ************************************************************************ //
+        var showErrorMessage = function (message, title, timeout) {
+            console.error(message);
+            iziToast.error({
+                message: message,
+                title: title || "Error",
+                timeout: timeout || 0
+            });    
+        };
+        // ************************************************************************ //
+        // SPLASH SCREEN - Update Scene Loading Progress Screen Information         //
+        // ************************************************************************ //
+        var updateStatus = function(status) {
+            if (label != null && status != null && label.innerHTML !== status) {
+                label.innerHTML = status;
+            }                   
+        };
+        var showSceneLoader = function() {
+            if (proj != null) proj.className = "";
+            if (panel != null) panel.className = "";
+            if (label != null) label.className = "";
+            if (loader != null) loader.className = "";
+            if (loader != null) loader.style.borderTop = "4px solid #E0684B";
+            // ..
+            divcvs.style.opacity = "0";
+            proj.innerHTML = title;
+            engine.clear(new BABYLON.Color3(0, 0, 0), true, true);
+            engine.displayLoadingUI();
+            updateStatus("");
+        };
+        var removeSceneLoader = function() {
+            if (proj != null) proj.className = "hidden";
+            if (panel != null) panel.className = "hidden";
+            if (label != null) label.className = "hidden";
+            if (loader != null) loader.className = "hidden";
+            // ..
+            engine.hideLoadingUI();
+            proj.innerHTML = "";
+            divcvs.style.opacity = "1";
+            updateStatus("");
+        };
+        // ************************************************************************ //
+        // SCENE LOADER - Execute Scene Loading With Progress Information           //
+        // ************************************************************************ //
+        var executeSceneLoader = function(root, name) {
+            BABYLON.Tools.Log("Loading scene file " + name.toLowerCase());
+            BABYLON.SceneLoader.Load(root, name, engine, function(newscene) {
+                window.scene = newscene;
+                window.scene.executeWhenReady(function() {
+                    loaded = true;
+                    if (window.scene.cameras == null || window.scene.cameras.length <= 0) {
+                        BABYLON.Tools.Warn("Adding default camera to scene");
+                        var zposition = (BABYLON.SceneManager != null && BABYLON.SceneManager.GetRightHanded(window.scene) === true) ? 10 : -10;
+                        var yrotation = (BABYLON.SceneManager != null && BABYLON.SceneManager.GetRightHanded(window.scene) === true) ? Math.PI : 0;
+                        var camera = new BABYLON.UniversalCamera("Default Camera", new BABYLON.Vector3(0, 1, zposition), window.scene);
+                        camera.rotation = new BABYLON.Vector3(0, yrotation, 0);
+                    }
+                    // ..
+                    engine.runRenderLoop(function() { 
+                        if (window.METER) {
+                            window.METER.tickStart();
+                            window.scene.render();
+                            window.METER.tick();
+                        } else {
+                            window.scene.render();
+                        }
+                    });
+                    // ..
+                    if (autoclose) {
+                        if (timeout > 1) updateStatus("Loading");
+                        window.setTimeout(removeSceneLoader, timeout * 1000);
+                    } else {
+                        BABYLON.Tools.Warn("Auto close splash loader disabled");
+                    }
+                });
+            }, function(evt) {
+                if (evt.lengthComputable) {
+                    updateStatus((evt.loaded * 100 / evt.total).toFixed() + "%");
+                } else {
+                    var units = " MB";
+                    var progess = Math.ceil(evt.loaded / (1024 * 1024));
+                    if (progess >= downloaded) {
+                        downloaded = progess;
+                    }
+                    if (downloaded < 1) downloaded = 1;
+                    if (downloaded > 1024) {
+                        units = " GB";
+                        downloaded = (downloaded / 1024);
+                    }
+                    updateStatus(downloaded + units);
+                }
+            }, function(scene, message) {
+                showErrorMessage(message || "Unknown Load Exception");
+            });
+        };
+        var defaultSceneLoader = function(root, name) {
+            window.scene = null;
+            loaded = false;
+            try {
+                showSceneLoader();
+                executeSceneLoader(root, name);            
+            } catch (ex2) {
+                showErrorMessage(ex2.message || "Unknown Parse Exception");
+            }
+        };
+        // ************************************************************************ //
+        // BABYLON ENGINE - Create Engine And Load Project Scene Hiearchy           //
+        // ************************************************************************ //
+        var engine = null;
+        try {
+            if (renderengine === 1) {
+                if (navigator.gpu) {
+                    BABYLON.Tools.Log("WebGPU graphics render engine loading experimental interface...");
+                    engine = new BABYLON.WebGPUEngine(divcvs);
+                    await engine.initAsync({ jsPath: "glslang.js", wasmPath: "glslang.wasm" }).catch((ex)=>{
+                        showErrorMessage(ex.message || "Unknown WebGPU Exception");
+                    });
+                } else {
+                    BABYLON.Tools.Warn("WebGPU is not supported on platform. Falling back to WebGL");
+                    engine = new BABYLON.Engine(divcvs, antialias, {premultipliedAlpha: false}, adaptive);
+                }
+            } else {
+                engine = new BABYLON.Engine(divcvs, antialias, {premultipliedAlpha: false}, adaptive);
+            }
+            engine.loadingScreen = new LoadingScreen();
+            engine.enableOfflineSupport = false;
+            engine.clear(new BABYLON.Color3(0, 0, 0), true, true);
+            engine.displayLoadingUI();
+        } catch (ex3) {
+            showErrorMessage(ex3.message || "Unknown Engine Exception");
+        }
+        // ************************************************************************ //
+        // DEFAULT LOADER - Initialize Default Scene Loading                        //
+        // ************************************************************************ //
+        window.addEventListener("resize", function() { engine.resize(); });
+        window.addEventListener("DOMContentLoaded", function() {
+            if (enablephysics === true && window.Ammo !== undefined) {
+                Ammo().then(function() { defaultSceneLoader(scenepath, scenename); });
+            } else {
+                defaultSceneLoader(scenepath, scenename);
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
